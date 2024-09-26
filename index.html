@@ -5,26 +5,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body>
+  <body></body>
     <header class="top_section">
       <h1>Red Hellier</h1>
-      <div class="navbar">
-        <div class="tab">
-          <p>ABOUT ME</p>
-        </div>
-        <div class="tab" id="alt">
-          <p>MY WORK</p>
-        </div>
-        <div class="tab">
-          <p>MY FAVES</p>
-        </div>
-        <div class="tab" id="alt">
-          <p>CONTACT ME</p>
-        </div>
-      </div>
     </header>
     <main>
-
+      <div class="navbar">
+        <button class="tab" id="about" active="true" type="button">
+          <p>ABOUT ME</p>
+        </button>
+        <button class="tab" id="work" scheme="alt" active="false" type="button">
+          <p>MY WORK</p>
+        </button>
+        <button class="tab" id="faves" active="false" type="button">
+          <p>MY FAVES</p>
+        </button>
+      </div>
+      <div id="page"></div>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

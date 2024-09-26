@@ -1,6 +1,20 @@
 body {
   margin: 0;
   min-width: 300px;
+  background-color: #BBC2E2;
+}
+
+main {
+  width: 90%;
+  margin: 50px auto;
+}
+
+#page {
+  height: 800px;
+  border-color: #63000d;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-radius: 0 0 8px 8px;
   background-color: #B38CB4;
 }
 
@@ -13,21 +27,17 @@ h1 {
   -webkit-text-stroke: #110605 1.5px;
 }
 
-.top_section {
+header {
   font-size: 25px;
   width: 100%;
   min-width: 600px;
   background-color: #BBC2E2;
-  border-bottom: #4b0710 3px solid;
-  border-top: #BBC2E2 1px solid;
 }
 
 .navbar {
-  font-size: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
-  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  
 }
 
 .tab {
@@ -43,13 +53,23 @@ h1 {
   border-style: solid;
   border-width: 10px 10px 0 10px;
   border-radius: 8px 8px 0 0;
+  border-bottom: #63000d 7px solid;
 }
 
-#alt {
+.tab:hover {
+  color: #BBC2E2;
+}
+
+[scheme="alt"] {
   -webkit-text-stroke: #812935 1.5px;
   border-color: #812935;
 }
 
+[active="true"] {
+  
+  border-bottom: none;
+}
+
 .tab p {
-  margin: 6% 0;
+  margin: 5% 0;
 }
