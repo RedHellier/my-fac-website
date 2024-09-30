@@ -4,13 +4,8 @@ console.log(tabs)
 for (let t of tabs) {
     t.onclick = function() {setActiveTab(t)};
 }
-/*
-var aboutTab = document.getElementById("about");
-tabs.push(aboutTab)
-var workTab = document.getElementById("work");
-tabs.push(workTab)
-var favesTab = document.getElementById("faves");
-tabs.push(favesTab)*/
+
+//comment
 
 function setActiveTab(element) {
     if (element.getAttribute("active")!=="true") {
