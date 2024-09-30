@@ -5,8 +5,6 @@ for (let t of tabs) {
     t.onclick = function() {setActiveTab(t)};
 }
 
-//comment
-
 function setActiveTab(element) {
     if (element.getAttribute("active")!=="true") {
         for (let t of tabs) {
