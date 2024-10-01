@@ -1,4 +1,4 @@
-var tabs = document.getElementsByClassName("tab")
+var tabs = document.getElementsByClassName("tab-page")
 console.log(tabs)
 
 for (let t of tabs) {

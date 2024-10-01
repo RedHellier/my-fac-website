@@ -34,13 +34,27 @@ header {
   background-color: #BBC2E2;
 }
 
-.navbar {
+.navbar-mobile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  
+  grid-template-columns: 1fr;
 }
 
-.tab {
+.navbar-desktop {
+  display: none;
+}
+
+@media all and (min-width: 40em) {
+  .navbar-mobile {
+    display: none;
+  }
+  
+  .navbar-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.tab, .tab-dropdown option {
   font-family: Tahoma, sans-serif;
   font-weight: 800;
   -webkit-text-stroke: #63000d 1.5px;
@@ -56,7 +70,12 @@ header {
   border-bottom: #63000d 7px solid;
 }
 
-.tab:hover {
+.tab-dropdown {
+  padding: 10px 0;
+  outline: none;
+}
+
+.tab-page:hover {
   color: #BBC2E2;
 }
 
@@ -66,10 +85,9 @@ header {
 }
 
 [active="true"] {
-  
   border-bottom: none;
 }
 
 .tab p {
-  margin: 5% 0;
+  margin: 10px 0;
 }

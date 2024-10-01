@@ -10,16 +10,24 @@
       <h1>Red Hellier</h1>
     </header>
     <main>
-      <div class="navbar">
-        <button class="tab" id="about" active="true" type="button">
+      <div class="navbar-desktop">
+        <button class="tab tab-page" id="about" active="true" type="button">
           <p>ABOUT ME</p>
         </button>
-        <button class="tab" id="work" scheme="alt" active="false" type="button">
+        <button class="tab tab-page" id="work" scheme="alt" active="false" type="button">
           <p>MY WORK</p>
         </button>
-        <button class="tab" id="faves" active="false" type="button">
+        <button class="tab tab-page" id="faves" active="false" type="button">
           <p>MY FAVES</p>
         </button>
+      </div>
+      <div class="navbar-mobile">
+        <select class="tab tab-dropdown" id="work" active="false" type="button">
+          <p>></p>
+          <option value="about"><button>ABOUT ME</button></option>
+          <option value="work"><button>MY WORK</button></option>
+          <option value="faves"><button>MY FAVES</button></option>
+        </select>
       </div>
       <div id="page"></div>
     </main>
