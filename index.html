@@ -6,32 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body></body>
-    <header class="top_section">
-      <h1>Red Hellier</h1>
-    </header>
-    <main>
-      <div class="navbar-desktop">
-        <button class="tab tab-page" id="about" active="true" type="button">
-          <p>ABOUT ME</p>
-        </button>
-        <button class="tab tab-page" id="work" scheme="alt" active="false" type="button">
-          <p>MY WORK</p>
-        </button>
-        <button class="tab tab-page" id="faves" active="false" type="button">
-          <p>MY FAVES</p>
-        </button>
+  <body>
+    <div class="desktop">
+      <div class="sidebar">
+        <header class="top_section">
+          <h1>Red Hellier</h1>
+        </header>
+        <main>
+
+        </main>
       </div>
-      <div class="navbar-mobile">
-        <select class="tab tab-dropdown" id="work" active="false" type="button">
-          <p>></p>
-          <option value="about"><button>ABOUT ME</button></option>
-          <option value="work"><button>MY WORK</button></option>
-          <option value="faves"><button>MY FAVES</button></option>
-        </select>
+
+      <div class="content">
+        <nav>
+          <button class="tab tab-page" id="about" active="true" type="button">
+            <p>ABOUT ME</p>
+          </button>
+          <button class="tab tab-page" id="work" scheme="alt" active="false" type="button">
+            <p>MY WORK</p>
+          </button>
+          <button class="tab tab-page" id="faves" active="false" type="button">
+            <p>MY FAVES</p>
+          </button>
+        </nav>
+        <main>
+          <figure id="left">
+            <img src="images/landscape-placeholder.svg">
+            <p>Sentence</p>
+          </figure>
+          <figure id="right">
+            <img id="right" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="left">
+            <img id="left" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+        </main>
       </div>
-      <div id="page"></div>
-    </main>
+      
+      
+    </div>
+
+    <div class="mobile">
+      <select class="tab tab-dropdown" id="work" active="false" type="button">
+        <option value="about">ABOUT ME</option>
+        <option value="work">MY WORK</option>
+        <option value="faves">MY FAVES</option>
+      </select>
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>

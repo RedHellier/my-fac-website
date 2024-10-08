@@ -1,92 +1,111 @@
-body {
-  margin: 0;
-  min-width: 300px;
-  background-color: #BBC2E2;
-}
-
-main {
-  width: 90vw;
-  margin: 50px auto;
-}
-
-#page {
-  height: 300px;
-  border-color: #63000d;
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-radius: 0 0 8px 8px;
-  background-color: #B38CB4;
-}
-
-h1 {
-  margin: 0.7em 0;
-  text-align: center;
-  color: #DB162F;
-  font-family: Tahoma, sans-serif;
-  font-weight: 800;
-  -webkit-text-stroke: #110605 1.5px;
-}
-
-header {
-  font-size: 25px;
-  width: 100%;
-  background-color: #BBC2E2;
-}
-
-.navbar-mobile {
+.mobile {
   display: none;
 }
 
-.navbar-desktop {
+.desktop {
+  display: inline-flex;
+}
+
+.sidebar {
+  display: inline-flex;
+  width: 140px;
+  flex-direction: column;
+  background-color: #633f3f;
+  min-height: 100vh;
+
+  header {
+    background-color: #532c2c;
+    
+    h1 {
+      margin: 0;
+      padding: 0.3em 0.5em;
+      text-align: center;
+      color: #ff0000;
+      font-family: Tahoma, sans-serif;
+      font-weight: 800;
+      font-size: 25px;
+      -webkit-text-stroke: #000000 1.5px;
+    }
+
+  }
+
+  main {
+    flex: 1;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #470000;
+}
+
+nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media only screen and (max-width: 480px) {
-  .navbar-mobile {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .navbar-desktop {
-    display: none;
-  }
-}
-
-.tab, .tab-dropdown option {
+.tab {
   font-family: Tahoma, sans-serif;
   font-weight: 800;
-  -webkit-text-stroke: #63000d 1.5px;
-  color: #DB162F;
-  font-size: 25px;
-  background-color: #B38CB4;
+  -webkit-text-stroke: #000000 1.5px;
+  color: #ffffff;
+  font-size: 30px;
+  background-color: #DB162F;
   text-align: center;
   display: inline-block;
-  border-color: #63000d;
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-radius: 8px 8px 0 0;
-  border-bottom: #63000d 7px solid;
-}
-
-.tab-dropdown {
-  padding: 10px 0;
-  outline: none;
-}
-
-.tab-page:hover {
-  color: #BBC2E2;
-}
-
-[scheme="alt"] {
-  -webkit-text-stroke: #812935 1.5px;
-  border-color: #812935;
+  border: none;
 }
 
 [active="true"] {
-  border-bottom: none;
+  background-color: #a70e22;
+}
+
+.tab-page:hover {
+  background-color: #a70e22;
 }
 
 .tab p {
   margin: 10px 0;
 }
+
+
+.content main {
+  flex: 1;
+}
+
+
+
+figure {
+  display: block;
+  flex-direction: row;
+  text-align: center;
+  
+  img {
+    display: inline-flex;
+    max-width: 25vw;
+    padding: 14px;
+  }
+
+  p {
+    display: inline-flex;
+    padding: 14px;
+  }
+}
+
+figure#right {
+  text-align: right;
+}
+
+
+
+@media all and (max-width: 480px) {
+  .mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
