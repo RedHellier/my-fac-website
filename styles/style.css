@@ -3,12 +3,12 @@
 }
 
 .desktop {
-  display: inline-flex;
+  display: contents;
 }
 
 .sidebar {
   display: inline-flex;
-  width: 140px;
+  width: 170px;
   flex-direction: column;
   background-color: #633f3f;
   min-height: 100vh;
@@ -37,11 +37,14 @@
 body {
   margin: 0;
   background-color: #470000;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
 }
 
 nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .tab {
