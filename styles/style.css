@@ -38,6 +38,42 @@ header {
       -webkit-text-stroke: #000000 1.5px;
     }
   }
+
+  nav {
+    flex-grow: 1;
+    background-color: #DB162F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    .tab {
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      color: #ffffff;
+      font-size: 25px;
+      background-color: #DB162F;
+      text-align: center;
+      align-content: center;
+      text-decoration: none;
+      display: inline-block;
+      width: 22vw;
+      border: none;
+      margin: 10px 0;
+    }
+
+    [active-tab="true"] {
+      background-color: #8f0c1e;
+    }
+
+    .tab-page:hover {
+      background-color: #8f0c1e;
+    }
+
+    .tab p {
+      margin: 10px 0;
+    }
+  }
+
 }
 
 main {
@@ -62,45 +98,39 @@ main {
       -webkit-text-stroke: #000000 1.5px;
     }
   }
+
 }
 
 .content {
   flex-grow: 1;
 }
 
-nav {
-  background-color: #DB162F;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.content#index {
+  background-color: blue;
 }
 
-.tab {
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  font-size: 25px;
-  background-color: #DB162F;
-  text-align: center;
-  align-content: center;
-  text-decoration: none;
-  display: inline-block;
-  width: 22vw;
-  border: none;
-  margin: 10px 0;
+.content#about {
+  background-color: green;
 }
 
-[active="true"] {
-  background-color: #8f0c1e;
+.content#work {
+  background-color: yellow;
 }
 
-.tab-page:hover {
-  background-color: #8f0c1e;
+.content#faves {
+  background-color: purple;
 }
 
-.tab p {
-  margin: 10px 0;
+[active-page="true"] {
+  display: block;
 }
+
+[active-page="false"] {
+  display: none;
+}
+
+
+
 
 
 

@@ -13,15 +13,19 @@
       <header>
 
         <div class="sidebar">
-          <h1><a href="index.html">RED</a></h1>
+          <button class="tab-page" id="index" active-tab="true">
+            <h1>RED</h1>
+          </button>
         </div>
 
-        <nav class="content">
-          <a href="about.html" class="tab tab-page" id="about" active="true">ABOUT ME</a>
-          <button class="tab tab-page" id="work" scheme="alt" active="false" type="button">
+        <nav>
+          <button class="tab tab-page" id="about" active-tab="false">
+            <p>ABOUT ME</p>
+          </button>
+          <button class="tab tab-page" id="work" active-tab="false">
             <p>MY WORK</p>
           </button>
-          <button class="tab tab-page" id="faves" active="false" type="button">
+          <button class="tab tab-page" id="faves" active-tab="false">
             <p>MY FAVES</p>
           </button>
         </nav>
@@ -33,7 +37,52 @@
         <div class="sidebar">
         </div>
 
-        <div class="content">
+        <div class="content" id="index" active-page="true">
+          <figure id="left">
+            <img src="images/landscape-placeholder.svg">
+            <p>Sentence</p>
+          </figure>
+          <figure id="right">
+            <img id="right" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="left">
+            <img id="left" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+        </div>
+        
+        <div class="content" id="about" active-page="false">
+          <figure id="left">
+            <img src="images/landscape-placeholder.svg">
+            <p>Sentence</p>
+          </figure>
+          <figure id="right">
+            <img id="right" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="left">
+            <img id="left" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+        </div>
+        
+        <div class="content" id="work" active-page="false">
+          <figure id="left">
+            <img src="images/landscape-placeholder.svg">
+            <p>Sentence</p>
+          </figure>
+          <figure id="right">
+            <img id="right" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="left">
+            <img id="left" src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+        </div>
+
+        <div class="content" id="faves" active-page="false">
           <figure id="left">
             <img src="images/landscape-placeholder.svg">
             <p>Sentence</p>
