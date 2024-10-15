@@ -11,8 +11,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 header {
   box-shadow: 0px 2px 10px black;
