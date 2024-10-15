@@ -1,14 +1,10 @@
-var tabs = document.getElementsByClassName("tab-page")
-var contents = document.getElementsByClassName("content")
+const tabs = document.getElementsByClassName("tab-page")
+const contents = document.getElementsByClassName("content")
 
 for (let t of tabs) {
     t.onclick = function() {
         setActiveTab(t)
     };
-}
-
-for (let c of contents) {
-    console.log(c)
 }
 
 function setActiveTab(element) {
@@ -29,5 +25,20 @@ function setActiveTab(element) {
                 c.setAttribute("active-page","false");
             }
         }
+    }
+}
+
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    let multiplier = window.scrollY/(document.documentElement.scrollHeight-window.innerHeight);
+    let scrollDistance = document.getElementById("scrollbar").offsetHeight - document.getElementById("scroller").offsetHeight;
+    document.getElementById("scroller").style.marginTop = multiplier*scrollDistance + "px";
+    if (multiplier > 0.99) {
+        document.getElementById("footer").style.bottom = "0";
+    } else {
+        document.getElementById("footer").style.bottom = "-100px";
     }
 }

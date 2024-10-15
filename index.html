@@ -8,8 +8,10 @@
   </head>
   <body>
 
+    <!-- DESKTOP LAYOUT-->
     <div class="desktop">
       
+      <!-- HEADER SECTION, NAVIGATION BAR-->
       <header>
 
         <div class="sidebar">
@@ -32,11 +34,15 @@
         
       </header>
 
+
+      <!-- MAIN SECTION, Scrollbar and Content-->
       <main>
 
-        <div class="sidebar">
+        <div class="sidebar" id="scrollbar">
+          <div id="scroller"></div>
         </div>
 
+        <!-- MAIN page content-->
         <div class="content" id="index" active-page="true">
           <figure id="left">
             <img src="images/landscape-placeholder.svg">
@@ -52,6 +58,7 @@
           </figure>
         </div>
         
+        <!-- ABOUT ME page content-->
         <div class="content" id="about" active-page="false">
           <figure id="left">
             <img src="images/landscape-placeholder.svg">
@@ -67,6 +74,7 @@
           </figure>
         </div>
         
+        <!-- MY WORK page content-->
         <div class="content" id="work" active-page="false">
           <figure id="left">
             <img src="images/landscape-placeholder.svg">
@@ -82,6 +90,7 @@
           </figure>
         </div>
 
+        <!-- MY FAVES page content-->
         <div class="content" id="faves" active-page="false">
           <figure id="left">
             <img src="images/landscape-placeholder.svg">
@@ -99,8 +108,20 @@
 
       </main>
 
+      <!-- FOOTER SECTION, Accessabilty Options-->
+      <footer id="footer">
+        <div class="sidebar">
+          <h1>-</h1>
+          <h1>-</h1>
+          <h1>-</h1>
+        </div>
+        <div class="content">
+        </div>
+      </footer>
+
     </div>
 
+    <!-- MOBILE LAYOUT-->
     <div class="mobile">
       <select class="tab tab-dropdown" id="work" active="false" type="button">
         <option value="about">ABOUT ME</option>

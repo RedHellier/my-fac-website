@@ -9,7 +9,9 @@
 body {
   margin: 0;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden
 }
 
 header {
@@ -19,6 +21,7 @@ header {
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 72px;
   
   .sidebar {
     display: inline-flex;
@@ -26,16 +29,21 @@ header {
     flex-direction: column;
     background-color: #7a1515;
   
-    h1 a {
+    button {
+      background-color: #8f0c1e;
       margin: 0;
+      border: none;
       padding: 0.3em 0.5em;
-      text-decoration: none;
-      text-align: center;
-      color: #ffffff;
-      font-family: Tahoma, sans-serif;
-      font-weight: 800;
-      font-size: 40px;
-      -webkit-text-stroke: #000000 1.5px;
+      h1 {
+        margin: 8px 0;
+        text-decoration: none;
+        text-align: center;
+        color: #ffffff;
+        font-family: Tahoma, sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        -webkit-text-stroke: #000000 1.5px;
+      }
     }
   }
 
@@ -65,10 +73,6 @@ header {
       background-color: #8f0c1e;
     }
 
-    .tab-page:hover {
-      background-color: #8f0c1e;
-    }
-
     .tab p {
       margin: 10px 0;
     }
@@ -76,26 +80,28 @@ header {
 
 }
 
+.tab-page:hover {
+  background-color: #8f0c1e;
+  cursor: pointer;
+}
+
 main {
   background-color: #470000;
   display:flex;
   margin-top: 72px;
+  flex: 1;
+  flex-grow: 2;
 
   .sidebar {
     display: inline-flex;
     flex-basis: 160px;
     flex-direction: column;
     background-color: #8f0c1e;
-  
-    h1 {
-      margin: 0;
-      padding: 0.3em 0.5em;
-      text-align: center;
-      color: #ffffff;
-      font-family: Tahoma, sans-serif;
-      font-weight: 800;
-      font-size: 40px;
-      -webkit-text-stroke: #000000 1.5px;
+
+    #scroller {
+      width: inherit;
+      height: 50vh;
+      background-color: #521b1b;
     }
   }
 
@@ -129,15 +135,12 @@ main {
   display: none;
 }
 
-
-
-
-
-
 figure {
   display: flex;
   flex-direction: row;
   text-align: center;
+  height: 88vh;
+  border: solid black 3px;
   
   img {
     display: inline-flex;
@@ -155,6 +158,36 @@ figure#right {
   flex-direction: row-reverse;
 }
 
+footer {
+  background-color: #303030;
+  display:flex;
+  box-shadow: 0px -2px 10px black;
+  min-height: 72px;
+  position: fixed;
+  bottom: -100px;
+  width: 100%;
+  transition: bottom 0.3s;
+
+  .sidebar {
+    display: inline-flex;
+    flex-basis: 160px;
+    flex-direction: column;
+    background-color: #686868;
+  
+    h1 {
+      margin: 0;
+      padding: 0;
+      height: 10px;
+      text-align: center;
+      color: #ffffff;
+      font-family: Tahoma, sans-serif;
+      font-weight: 800;
+      font-size: 40px;
+      -webkit-text-stroke: #000000 1.5px;
+    }
+  }
+
+}
 
 
 @media all and (max-width: 480px) {
@@ -167,4 +200,3 @@ figure#right {
     display: none;
   }
 }
-
