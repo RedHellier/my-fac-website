@@ -107,8 +107,19 @@ main {
 
     #scroller {
       width: inherit;
-      height: 50vh;
       background-color: #521b1b;
+      text-align: center;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      color: #ffffff;
+      font-size: 20px;
+
+      p {
+        align-content: center;
+        height: 3em;
+        width: 6em;
+        margin: 50% auto;
+      }
     }
   }
 
@@ -148,7 +159,6 @@ figure {
   text-align: center;
   height: 85vh;
   border: solid black 3px;
-  position: relative;
   
   img {
     display: inline-flex;
@@ -171,10 +181,6 @@ footer {
   display:flex;
   box-shadow: 0px -2px 10px black;
   min-height: 72px;
-  /*position: fixed;
-  bottom: -100px;
-  width: 100%;
-  transition: bottom 0.3s;*/
 
   .sidebar {
     display: inline-flex;
