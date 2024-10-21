@@ -1,9 +1,10 @@
-const tabs = document.getElementsByClassName("tab-page")
-const contents = document.getElementsByClassName("content")
-let figures = document.getElementsByClassName("figure")
+const tabs = document.getElementsByClassName("tab-page");
+const contents = document.getElementsByClassName("content");
+let figures = document.getElementsByClassName("figure");
+let currentFigure = 0;
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
-let currentFigure = 0;
+document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
 
 
 for (let t of tabs) {
