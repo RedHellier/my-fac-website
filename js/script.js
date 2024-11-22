@@ -1,12 +1,40 @@
 const tabs = document.getElementsByClassName("tab-page");
 const contents = document.getElementsByClassName("content");
 
+const movies = {
+    index: 0,
+    images: ["Marcel", "memento", "petmam", "PotC3", "prd"],
+    titles: ["Marcel the Shell with Shoes On", "Memento", "Petite Maman", "Pirates of the Carribean 3", "Pretty Red Dress"],
+    details: [
+        [
+            "<strong>2021 - Dean Fleischer Camp</strong>",
+            "<strong>Synopsis > </strong>A film bout a shell with shoes on looking for his family",
+            "<strong>My Review > </strong>There is no other cinematic medium that is as careful as stop-motion animation and Marcel truly embodies that care. The filmakers had to shoot every scene of this movie twice, each time perfectly replicating camera position, lighting and speed. "
+        ],
+        [
+            "<strong>2000 - Christopher Nolan</strong>",
+            "<strong>Synopsis > </strong>A man with short term memory loss tries to find his wife's murderer"
+        ],
+        [
+            "<strong>2021 - Celine Sciamma</strong>",
+            "<strong>Synopsis > </strong>While visiting her grandmother's house, this little girl makes a friend that seems very familiar"
+        ],
+        [
+            "<strong>2007 - Gore Verbinski</strong>",
+            "<strong>Synopsis > </strong>The epic finale to the origoinal Pirates trilogy, who will make it out on top?"],
+        [
+            "<strong>2022 - Dionne Edwards</strong>",
+            "<strong>Synopsis > </strong>Are we who we want to be or who we want others to think we are?"
+        ]
+    ]
+}
+
 let figures;
 let activeContent;
 let currentFigure;
 
 setActiveTab(tabs.item(0));
-
+changeMovie(0);
 
 for (let t of tabs) {
     t.onclick = function() {
@@ -40,6 +68,17 @@ function setActiveTab(element) {
                 c.setAttribute("active-page","false");
             }
         }
+    }
+}
+
+function changeMovie(direction) {
+    movies.index += direction;
+    movies.index = movies.index > 4 ? 4 : movies.index < 0 ? 0 : movies.index;
+    document.getElementById("movie-image").setAttribute("src","images/MoviePosters/" + movies.images[movies.index] + ".jpg");
+    document.getElementById("movie-title").innerHTML = movies.titles[movies.index];
+    document.getElementById("movie-details").innerHTML = "";
+    for (let d of movies.details[movies.index]) {
+        document.getElementById("movie-details").innerHTML += "<p>" + d + "</p>";
     }
 }
 
