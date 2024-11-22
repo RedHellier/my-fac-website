@@ -1,10 +1,11 @@
 const tabs = document.getElementsByClassName("tab-page");
 const contents = document.getElementsByClassName("content");
-let figures = document.getElementsByClassName("figure");
-let currentFigure = 0;
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
-document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
+
+let figures;
+let activeContent;
+let currentFigure;
+
+setActiveTab(tabs.item(0));
 
 
 for (let t of tabs) {
@@ -15,10 +16,7 @@ for (let t of tabs) {
         currentFigure = 0;
     };
 }
-/**
- * Returns the sum of all numbers passed to the function.
- * @param {HTMLElement | number} element A positive or negative number
- */
+
 function setActiveTab(element) {
     if (element.getAttribute("active-tab")!=="true") {
 
@@ -33,6 +31,11 @@ function setActiveTab(element) {
         for (let c of contents) {
             if (element.id===c.id) {
                 c.setAttribute("active-page","true");
+                figures = c.getElementsByClassName("figure");
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+                currentFigure = 0;
+                document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
             } else {
                 c.setAttribute("active-page","false");
             }

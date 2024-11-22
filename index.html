@@ -15,7 +15,7 @@
       <header id="header">
 
         <div class="sidebar">
-          <button class="tab-page" id="index" active-tab="true">
+          <button class="tab-page" id="index" active-tab="false">
             <h1>RED</h1>
           </button>
         </div>
@@ -24,7 +24,7 @@
           <button class="tab tab-page" id="about" active-tab="false">
             <p>ABOUT ME</p>
           </button>
-          <button class="tab tab-page" id="work" active-tab="false">
+          <button class="tab tab-page" id="work" active-tab="true">
             <p>MY WORK</p>
           </button>
           <button class="tab tab-page" id="faves" active-tab="false">
@@ -46,22 +46,27 @@
 
         <!-- MAIN page content-->
         <div class="content" id="index" active-page="false">
-          <figure id="left">
-            <img src="images/landscape-placeholder.svg">
-            <p>Sentence</p>
+          <figure class="figure" title="Childhood">
+            <img src="images/Childhood.jpg">
+            <div class="figure-text">
+            </div>
           </figure>
-          <figure id="right">
-            <img id="right" src="images/landscape-placeholder.svg">
+          <figure id="right" class="figure" title="2005">
+            <img src="images/landscape-placeholder.svg">
             <p></p>
           </figure>
-          <figure id="left">
-            <img id="left" src="images/landscape-placeholder.svg">
+          <figure class="figure" title="The Golden Years">
+            <img src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="right" class="figure bottom" title="2020">
+            <img src="images/landscape-placeholder.svg">
             <p></p>
           </figure>
         </div>
         
         <!-- ABOUT ME page content-->
-        <div class="content" id="about" active-page="true">
+        <div class="content" id="about" active-page="false">
           <figure class="figure" title="Childhood">
             <img src="images/Childhood.jpg">
             <div class="figure-text">
@@ -69,7 +74,7 @@
               <p><strong>1999 > </strong> A Star is Born. I was born in London to parents Mike and Eleanor. I was the best baby in the world, so good in fact that they never wanted to have another.</p>
               <p><strong>2002 > </strong> A Younger Star is Born. Okay I lied, three years later my younger sibling Ash was born. Genuinely this time, the best sibling I could have asked for.</p>
               <p><strong>2005 > </strong> A Child of Many Talents. </p>
-              </div>
+            </div>
           </figure>
           <figure id="right" class="figure" title="2005">
             <img src="images/landscape-placeholder.svg">
@@ -86,33 +91,71 @@
         </div>
         
         <!-- MY WORK page content-->
-        <div class="content" id="work" active-page="false">
-          <figure id="left">
-            <img src="images/landscape-placeholder.svg">
-            <p>Sentence</p>
+        <div class="content" id="work" active-page="true">
+          <figure class="figure" title="SNAC-MAN">
+            <img src="images/SnacManScreenshot.png">
+            <div class="figure-text">
+              <!---h1 class="title-text">SNAC-MAN</h1> --->
+              <img src="images/snacman-logo.png">
+              <p>You control a snake through a pacman maze</p>
+              <p>Eat food to grow longer while avoiding hitting youself or the ghosts</p>
+              <p>If the ghost hits your head, you lose</p>
+              <p>If the ghost hits your body, you get chopped in half and lose your built up length</p>
+              <p>If you eat the power up you can move through yourself and eat the ghosts to grow even longer</p>
+              <p>Get as long as you can while eating as much as you can to get a highscore</p>
+              <p><strong><a href="https://redhellier.github.io/my-fac-game/" target="_blank">PLAY GAME</a></strong></p>
+            </div>
           </figure>
-          <figure id="right">
-            <img id="right" src="images/landscape-placeholder.svg">
-            <p></p>
+          <figure id="right" class="figure" title="The Door">
+            <video controls>
+              <source src="videos/TheDoor.mp4" type="video/mp4">
+            </video>
+            <div class="figure-text">
+              <h1 class="title-text">The Door</h1>
+              <p><strong>Synopsis > </strong> A young man is working hard on a project. He gets up for a break and finds he cannot open the door of the room he is in. What will happen when he finally frees himself?</p>
+              <p><strong>Credits > </strong> Starring - Red Hellier</p>
+              <p><strong>          </strong> Director - Red Hellier</p>
+              <p><strong>          </strong> Editing - Red Hellier</p>
+              <p><strong>          </strong> Music - Gorillaz</p>
+              <p><strong>Critical Acclaim > </strong> This film won no awards and made no money, but my partner thought it was pretty good</p>
+              <p><strong>Trivia > </strong> The entire films was made in 2 hours</p>
+            </div>
           </figure>
-          <figure id="left">
-            <img id="left" src="images/landscape-placeholder.svg">
-            <p></p>
+          <figure class="figure" title="Macabre">
+            <video controls>
+              <source src="videos/Macabre.mp4" type="video/mp4">
+            </video>
+            <div class="figure-text">
+              <h1 class="title-text">Macabre</h1>
+              <p><strong>Synopsis > </strong> On a macabre day in the peak district, a man murders a stranger. We follow his journey home to hopefully learn why he went to such lengths</p>
+              <p><strong>Credits > </strong> Starring - Rory Finch</p>
+              <p><strong>          </strong> Directors - Red Hellier & Rory Finch</p>
+              <p><strong>          </strong> Writers - Red Hellier & Rory Finch</p>
+              <p><strong>          </strong> Editing - Red Hellier</p>
+              <p><strong>          </strong> Music - Red Hellier</p>
+              <p><strong>Critical Acclaim > </strong> This film won no awards and made no money, most people who watch it have no idea what's going on</p>
+              <p><strong>Trivia > </strong> The pin-board montage scene was meant to only be 10/15 second but the film makers made too much nonsense and had to film it all for some reason</p>
+            </div>
           </figure>
         </div>
 
         <!-- MY FAVES page content-->
         <div class="content" id="faves" active-page="false">
-          <figure id="left">
-            <img src="images/landscape-placeholder.svg">
-            <p>Sentence</p>
+          <figure class="figure" title="Childhood">
+            <img src="images/Childhood.jpg">
+            <div class="figure-text">
+            </div>
           </figure>
-          <figure id="right">
-            <img id="right" src="images/landscape-placeholder.svg">
+          <figure id="right" class="figure" title="2005">
+            <img src="images/landscape-placeholder.svg">
             <p></p>
           </figure>
-          <figure id="left">
-            <img id="left" src="images/landscape-placeholder.svg">
+          <figure class="figure" title="The Golden Years">
+            <img src="images/landscape-placeholder.svg">
+            <p></p>
+          </figure>
+          <figure id="right" class="figure bottom" title="2020">
+            <img src="images/landscape-placeholder.svg">
             <p></p>
           </figure>
         </div>
@@ -126,7 +169,7 @@
           <h1>-</h1>
           <h1>-</h1>
         </div>
-        <div class="content">
+        <div class="footer-content">
         </div>
       </footer>
 

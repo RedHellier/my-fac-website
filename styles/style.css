@@ -101,7 +101,6 @@ main {
 
   .sidebar {
     display: inline-flex;
-    flex-basis: 160px;
     flex-direction: column;
     background-color: #8f0c1e;
 
@@ -157,6 +156,14 @@ figure {
     border-radius: 25px;
   }
 
+  video, iframe {
+    width: 800px;
+    height: 600px;
+    margin: 30px;
+    border: solid #2e2323 7px;
+    border-radius: 25px;
+  }
+
   .figure-text {
     display: flex;
     flex-direction: column;
@@ -166,6 +173,13 @@ figure {
     align-content: center;
     font-family:Arial, Helvetica, sans-serif;
     color: rgb(51, 5, 5);
+    margin: 0 30px;
+
+    img {
+      border: none;
+      border-radius: 0;
+      margin: 10px 0;
+    }
 
     h1 {
       font-size: 50px;
@@ -173,7 +187,6 @@ figure {
 
     p {
       display: inline;
-      max-width: 90%;
       padding: 6px 0;
       margin: 0;
       font-size: 22px;
@@ -184,6 +197,10 @@ figure {
 
 figure#right {
   flex-direction: row-reverse;
+  
+  .figure-text {
+    text-align: right;
+  }
 }
 
 figure.bottom {
