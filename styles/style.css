@@ -36,22 +36,20 @@ header {
     flex-direction: column;
     background-color: #7a1515;
   
-    button {
+    h1 {
       background-color: #8f0c1e;
       margin: 0;
       border: none;
       padding: 0.3em 0.5em;
-      h1 {
-        margin: 8px 0;
-        text-decoration: none;
-        text-align: center;
-        color: #ffffff;
-        font-family: Tahoma, sans-serif;
-        font-weight: 800;
-        font-size: 40px;
-        -webkit-text-stroke: #000000 1.5px;
-      }
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      font-family: Tahoma, sans-serif;
+      font-weight: 800;
+      font-size: 40px;
+      -webkit-text-stroke: #000000 1.5px;
     }
+    
   }
 
   nav {
@@ -73,6 +71,7 @@ header {
       display: inline-block;
       width: 22vw;
       border: none;
+      border-radius: 12px;
       margin: 10px 0;
     }
 
@@ -179,6 +178,7 @@ figure {
     font-family: Tahoma, sans-serif;
     color: rgb(51, 5, 5);
     margin: 0 30px;
+    font-size: 20px;
 
     img {
       border: none;
@@ -191,12 +191,17 @@ figure {
       margin-top: 0;
     }
 
-    p {
+    p, ul {
       margin: 5px 0;
       padding-left: 10px;
-      font-size: 20px;
       border-left: 5px solid #7a1515;
       border-radius: 3px;
+      list-style: inside disc;
+    }
+
+    li {
+      font-size: 18px;
+      padding: 4px 0 0 0;
     }
 
     #snacman-link {
@@ -224,10 +229,11 @@ figure#right {
   .figure-text {
     text-align: right;
     
-    p {
+    p, ul {
       padding-right: 10px;
       border-right: 5px solid #7a1515;
       border-left: none;
+      list-style: inside disc;
     }
   }
 }

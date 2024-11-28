@@ -53,15 +53,18 @@ const faves = {
         details: [
             [
                 "<strong>1969 | The Beatles</strong>",
-                "<strong>My Review > </strong>"
+                "<strong>Top Tracks > </strong>Golden Slumbers, Carry That Weight, The End",
+                "<strong>My Review > </strong>Of the many classic Beatles albums, Abbey Road stand above the rest for me thanks to the way they crafted the album into a choesive experience. While the album does hop around different styles, going from the happy go lucky Octopus's Garden to the more rocky I Want You (She's So Heavy), it manages to tie these tracks together. This is especially true in the second half of the album where tracks smoothly transition into each other, bringing in melodies and motifs that come back later. The last three tracks make for an epic finale that reflects on the album as a whole, crescendoing into an overwhelming mix of call backs before coming back down into a beautiful sentiment of shared love."
             ],
             [
                 "<strong>2006 | Joanna Newsom</strong>",
-                "<strong>My Review > </strong>"
+                "<strong>Top Tracks > </strong>Emily, Sawdust and Diamonds",
+                "<strong>My Review > </strong>Over the course of this 5 track, 55 minute album Joanna Newsom delicatly spins immense tales of monkeys, bears, meteors and puppets. There is enough here to write a dissertation or two about but this is not neccassary to enjoy listening to Ys. The imagery alone is so beautiful and tragic in places that no deeper meaning need be understood to bring a tear to your eye. The orchestration is so beautiful and precise, with strings swelling and percussion occasionally rolling in, but the moments when all of that is stripped back to leave Joanna's voice and harp alone are the most compelling."
             ],
             [
                 "<strong>2021 | Dijon</strong>",
-                "<strong>My Review > </strong>"
+                "<strong>Top Tracks > </strong>Many Times, Rodeo Clown",
+                "<strong>My Review > </strong>I have never been reminded so strongly of the passion that comes from performing music than when I listen to Absolutely. This album, along with the short film released of the band performing the best tracks in a strange dining room/garage set, evokes that feeling of being wholely invested in playing the music you love. It seems to almost posses Dijon in his performance on tracks like Many Times, giving you this frantic feeling that the performance has to be at 100%. He goes from yelling out his pain and anger from a past relationship to solemnly wishing for a future that could have been. Every member of the band brings that joy of performing to this album, making it a wonderful colllaborative album to listen to"
             ]
         ]
     }
