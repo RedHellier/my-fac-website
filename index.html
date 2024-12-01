@@ -19,15 +19,15 @@
         </div>
 
         <nav>
-          <button class="tab tab-page" id="about" active-tab="false">
+          <a class="tab tab-page" id="about" active-tab="true" href="./index.html">
             <p>ABOUT ME</p>
-          </button>
-          <button class="tab tab-page" id="work" active-tab="true">
+          </a>
+          <a class="tab tab-page" id="work" active-tab="false" href="./work.html">
             <p>MY WORK</p>
-          </button>
-          <button class="tab tab-page" id="faves" active-tab="false">
+          </a>
+          <a class="tab tab-page" id="faves" active-tab="false" href="./faves.html">
             <p>MY FAVES</p>
-          </button>
+          </a>
         </nav>
         
       </header>
@@ -45,6 +45,67 @@
         <!-- MAIN page content-->
         
         <!-- ABOUT ME page content-->
+        <div class="content" id="about">
+          <figure class="figure" title="About Me">
+            <img src="images/Childhood.jpg">
+            <div class="figure-text">
+              <h1 class="title-text">About Me</h1>
+              <p>I am an aspiring software developer with a passion for learning more. You could say I love software and self development.</p>
+              <p>What I'm looking forward to most about this path I'm on is making exiting and innovative projects with other people. I have always loved sharing ideas with friends and colleagues and coming together to find solutions to problems.</p>
+              <p>Starting in September 2024 I attended the Founders and Coders coding meetups. This experience has helped me gain a lot of confidence in my coding skills as well as excitement to use them. I have met all sorts of people with very different backgrounds and it's been fantastic getting to chat and compare work with them.</p>
+              <p>With the ever changing nature of this industry it can be easy to worry about pursuing this path now, but I find that it only gives me more drive to push on.</p>
+            </div>
+          </figure>
+          <figure id="right" class="figure" title="Developer">
+            <img src="images/landscape-placeholder.svg">
+            <div class="figure-text">
+              <h1 class="title-text">The Developer in Me</h1>
+              <p>I studied Computer Science at The Univeristy of Sheffield from 2017 - 2020</p>
+              <ul>Some key modules of my degree include:
+                <li>Data Driven Computing > We learnt how to build a machine learning algorithm and used large data sets to improve our algorithm</li>
+                <li>The Software Hut > In a team of 5, we used Ruby on Rails to build and deply a web app</li>
+                <li>Human-Machine Interaction and Robotics > We programmed the ev3 Lego Mindstorm Robots to search an area to find a light source, using seach patterns, object avoidance, and beaconing behaviours</li>
+              </ul>
+              <p>I have recently developed an in-browser game called SNAC-MAN using HTML,CSS and Javascript. I used canvas graphics to draw the game and a grid based collision system. The ghosts all move based on a basic algorithm that looks ahead to see which direction (up, down, left, right) is closst to their target square.</p>
+            </div>
+          </figure>
+          <figure class="figure" title="Creative">
+            <img src="images/Childhood.jpg">
+            <div class="figure-text">
+              <h1 class="title-text">The Creative in Me</h1>
+              <p>My desire to become a software developer began as a desire to become a game developer. Coming up with new ideas and then trying to build them and test them is an addictive process for me.</p>
+              <p>SNAC-MAN was a very fun challenge as I had to pick which aspects of each game (PAC-MAN and Snake) to use. For example, should the snake be able to go back on itself? You can in PAC-MAN, but you fundamentally can't in snake.Which mechanic would make it more fun is the question. I decided to go with the snake approach as this adds a layer of tactical give and take. The longer you are, the harder it is to move around the maze freely, so you could sacrifice some of your length to regain some breathing room.</p>
+              <p>Decisions like this are what make game development so interesting and this extends to all software development. The constant process of choosing what features to develop and how to tweak them on a micro level to fit their purpose best.</p>
+              <p>Another passion of mine is film making. I have made two short films, one solo endeavour and the other a two person project. I am also currently working on shooting a music video with a friend of mine. Crafting narratives is such a joy and being able to work with friends to make them come to lifeis an amazing privilage. I plan to make many more in future.</p>
+            </div>
+          </figure>
+        </div>
+
+      </main>
+
+      <!-- FOOTER SECTION, Accessabilty Options-->
+      <footer id="footer">
+        <div class="sidebar">
+          <h1>-</h1>
+          <h1>-</h1>
+          <h1>-</h1>
+        </div>
+        <div class="footer-content">
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- MOBILE LAYOUT>
+    <div class="mobile">
+
+      <header>
+        <button class="tab-dropdown" onclick="open">
+      </header>
+
+
+      <main>
+
         <div class="content" id="about" active-page="true">
           <figure class="figure" title="About Me">
             <img src="images/Childhood.jpg">
@@ -56,10 +117,10 @@
               <p>With the ever changing nature of this industry it can be easy to worry about pursuing this path now, but I find that it only gives me more drive to push on.</p>
             </div>
           </figure>
-          <figure id="right" class="figure" title="Computer Scientist">
+          <figure id="right" class="figure" title="Developer">
             <img src="images/landscape-placeholder.svg">
             <div class="figure-text">
-              <h1 class="title-text">The Computer Scientist in Me</h1>
+              <h1 class="title-text">The Developer in Me</h1>
               <p>I studied Computer Science at The Univeristy of Sheffield from 2017 - 2020</p>
               <ul>Some key modules of my degree include:
                 <li>Data Driven Computing > We learnt how to build a machine learning algorithm and used large data sets to improve our algorithm</li>
@@ -81,92 +142,8 @@
           </figure>
         </div>
         
-        <!-- MY WORK page content-->
-        <div class="content" id="work" active-page="false">
-          <figure class="figure" title="SNAC-MAN">
-            <img src="images/SnacManScreenshot.png">
-            <div class="figure-text">
-              <!---h1 class="title-text">SNAC-MAN</h1> --->
-              <a href="https://redhellier.github.io/my-fac-game/" target="_blank"><img src="images/snacman-logo.png"></a>
-              <p>You control a snake through a pacman maze</p>
-              <p>Eat food to grow longer while avoiding hitting youself or the ghosts</p>
-              <p>If the ghost hits your head, you lose</p>
-              <p>If the ghost hits your body, you get chopped in half and lose your built up length</p>
-              <p>If you eat the power up you can move through yourself and eat the ghosts to grow even longer</p>
-              <p>Get as long as you can while eating as much as you can to get a highscore</p>
-              <a id="snacman-link" href="https://redhellier.github.io/my-fac-game/" target="_blank"><strong>PLAY GAME</strong></a>
-            </div>
-          </figure>
-          <figure id="right" class="figure" title="The Door">
-            <video controls>
-              <source src="videos/TheDoor.mp4" type="video/mp4">
-            </video>
-            <div class="figure-text">
-              <h1 class="title-text">The Door</h1>
-              <p><strong>Synopsis > </strong> A young man is working hard on a project. He gets up for a break and finds he cannot open the door of the room he is in. What will happen when he finally frees himself?</p>
-              <p><strong>Credits > </strong> Starring - Red Hellier</p>
-              <p>Director - Red Hellier</p>
-              <p>Editing - Red Hellier</p>
-              <p>Music - Gorillaz</p>
-              <p><strong>Critical Acclaim > </strong> This film won no awards and made no money, but my partner thought it was pretty good</p>
-              <p><strong>Trivia > </strong> The entire films was made in 2 hours</p>
-            </div>
-          </figure>
-          <figure class="figure" title="Macabre">
-            <video controls>
-              <source src="videos/Macabre.mp4" type="video/mp4">
-            </video>
-            <div class="figure-text">
-              <h1 class="title-text">Macabre</h1>
-              <p><strong>Synopsis > </strong> On a macabre day in the peak district, a man murders a stranger. We follow his journey home to hopefully learn why he went to such lengths</p>
-              <p><strong>Credits > </strong> Starring - Rory Finch</p>
-              <p>Directors - Red Hellier & Rory Finch</p>
-              <p>Writers - Red Hellier & Rory Finch</p>
-              <p>Editing - Red Hellier</p>
-              <p>Music - Red Hellier</p>
-              <p><strong>Critical Acclaim > </strong> This film won no awards and made no money, most people who watch it have no idea what's going on</p>
-              <p><strong>Trivia > </strong> The pin-board montage scene was meant to only be 10/15 second but the film makers made too much nonsense and had to film it all for some reason</p>
-            </div>
-          </figure>
-        </div>
-
-        <!-- MY FAVES page content-->
-        <div class="content" id="faves" active-page="false">
-          <figure class="figure with-buttons" title="Movies">
-            <button class="next-left" onclick="changeFave(-1,'movie')">&lt</button>
-            <img id="movie-image" src="">
-            <div class="figure-text">
-              <h1>Top 3 Movies</h1>
-              <h2 id="movie-title"></h2>
-              <div id="movie-details"></div>
-            </div>
-            <button class="next-right" onclick="changeFave(1,'movie')">&gt</button>
-          </figure>
-          <figure id="right" class="figure with-buttons" title="Games">
-            <button class="next-right" onclick="changeFave(1,'game')">&gt</button>
-            <img id="game-image" src="">
-            <div class="figure-text">
-              <h1>Top 3 Games</h1>
-              <h2 id="game-title"></h2>
-              <div id="game-details"></div>
-            </div>
-            <button class="next-left" onclick="changeFave(-1,'game')">&lt</button>
-          </figure>
-          <figure class="figure with-buttons" title="Albums">
-            <button class="next-left" onclick="changeFave(-1,'album')">&lt</button>
-            <img id="album-image" src="">
-            <div class="figure-text">
-              <h1>Top 3 albums</h1>
-              <h2 id="album-title"></h2>
-              <div id="album-details"></div>
-            </div>
-            <button class="next-right" onclick="changeFave(1,'album')">&gt</button>
-          </figure>
-        </div>
-
       </main>
 
-      <!-- FOOTER SECTION, Accessabilty Options-->
       <footer id="footer">
         <div class="sidebar">
           <h1>-</h1>
@@ -176,17 +153,7 @@
         <div class="footer-content">
         </div>
       </footer>
-
-    </div>
-
-    <!-- MOBILE LAYOUT-->
-    <div class="mobile">
-      <select class="tab tab-dropdown" id="work" active="false" type="button">
-        <option value="about">ABOUT ME</option>
-        <option value="work">MY WORK</option>
-        <option value="faves">MY FAVES</option>
-      </select>
-    </div>
+    </div> -->
 
     <script src="js/script.js"></script>
   </body>

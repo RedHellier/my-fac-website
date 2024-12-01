@@ -27,7 +27,7 @@ header {
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 72px;
+  height: 72.1px;
   transition: top 0.3s;
   
   .sidebar {
@@ -136,12 +136,12 @@ main {
   display: none;
 }
 
-figure {
+.figure {
   display: flex;
   align-items: center;
   justify-content:space-between;
   min-height: 85vh;
-  margin: 20px 30px 60px 30px;
+  margin: 20px 30px 30px 30px;
   padding: 0 50px;
   border-radius: 25px;
   background-color: #d15f5f;
@@ -178,6 +178,7 @@ figure {
     font-family: Tahoma, sans-serif;
     color: rgb(51, 5, 5);
     margin: 0 30px;
+    padding: 20px 0;
     font-size: 20px;
 
     img {
@@ -194,6 +195,7 @@ figure {
     p, ul {
       margin: 5px 0;
       padding-left: 10px;
+      line-height: 30px;
       border-left: 5px solid #7a1515;
       border-radius: 3px;
       list-style: inside disc;
@@ -223,7 +225,7 @@ figure {
   }
 }
 
-figure#right {
+.figure#right {
   flex-direction: row-reverse;
   
   .figure-text {
@@ -242,15 +244,19 @@ figure.bottom {
   margin-bottom: 20px;
 }
 
-figure.with-buttons {
+figure.buttons {
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 30px 30px 30px;
+  height: fit-content;
 
   button {
     width: 50px;
     margin: 0;
-    height: 85vh;
-    padding: 0;
-    background: inherit;
+    padding: 0 10px;
+    background: #d15f5f;
     border: none;
     color: rgb(51, 5, 5);
     font-size: 40px;
@@ -271,6 +277,12 @@ figure.with-buttons {
   button.next-right:hover {
     background-image: linear-gradient(to right,#d15f5f,#7a1515);
   }
+}
+
+figure.with-buttons, figure.with-buttons#right {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -300,14 +312,108 @@ footer {
 
 }
 
-
-@media all and (max-width: 480px) {
-  .mobile {
-    display: grid;
-    grid-template-columns: 1fr;
+/* Smaller Desktop Breakpoint */
+@media all and (max-width: 1000px) {
+  .figure, .figure#right {
+    flex-direction: column;
+    
+    img, video, .figure-text {
+      width: 90%;
+      min-height: fit-content;
+    }
   }
 
-  .desktop {
+}
+
+
+@media all and (max-width: 480px) {
+
+  #scrollbar {
     display: none;
+  }
+
+  .figure, .figure#right {
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content:space-between; */
+    margin: 10px;
+    padding: 0;
+    border-radius: 25px;
+    background-color: #d15f5f;
+    
+    img {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 3%;
+      width: 90%;
+      height: fit-content;
+      /* max-height: 70vh; */
+      /* max-width: fit-content; */
+      border: solid #2e2323 7px;
+      border-radius: 25px;
+    }
+
+    video, iframe {
+      width: 50%;
+      height: fit-content;
+      margin: 30px;
+      border: solid #2e2323 7px;
+      border-radius: 25px;
+      background-color: #000000;
+    }
+
+    .figure-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* text-align: left; */
+      /* min-height: 80%; */
+      width: 90%;
+      align-content: center;
+      font-family: Tahoma, sans-serif;
+      color: rgb(51, 5, 5);
+      margin: 0 30px;
+      font-size: 20px;
+
+      img {
+        border: none;
+        border-radius: 0;
+        margin: 10px 0;
+      }
+
+      /* h1 {
+        font-size: 50px;
+        margin-top: 0;
+      } */
+
+      /* p, ul {
+        margin: 5px 0;
+        padding-left: 10px;
+        border-left: 5px solid #7a1515; 
+        border-radius: 3px; 
+        list-style: inside disc;
+      } */
+
+      /* li {
+        font-size: 18px;
+        padding: 4px 0 0 0;
+      } */
+
+      #snacman-link {
+        background-color:#7a1515;
+        border-radius: 12px;
+        padding: 12px;
+        width: fit-content;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 22px;
+        margin-top: 12px;
+
+      }
+
+      #snacman-link:hover {
+        background-color: #DB162F;
+      }
+    }
   }
 }
