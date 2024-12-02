@@ -55,8 +55,8 @@
     <!-- MY FAVES page content-->
     <div class="content" id="faves">
       <figure class="buttons">
-        <button class="next-left" onclick="changeFave(-1,'movie')">&lt</button>
-        <figure class="figure with-buttons" title="Movies">
+        <button class="next-left" onclick="arrowPress(-1,'movie')">&lt</button>
+        <figure  id="movie-figure" class="figure with-buttons" title="Movies">
           <img id="movie-image" src="">
           <div class="figure-text">
             <h1>Top 3 Movies</h1>
@@ -64,11 +64,11 @@
             <div id="movie-details"></div>
           </div>
         </figure>
-        <button class="next-right" onclick="changeFave(1,'movie')">&gt</button>
+        <button class="next-right" onclick="arrowPress(1,'movie')">&gt</button>
       </figure>
       <figure class="buttons">
-        <button class="next-left" onclick="changeFave(-1,'game')">&lt</button>
-        <figure id="right" class="figure with-buttons" title="Games">
+        <button class="next-left" onclick="arrowPress(-1,'game')">&lt</button>
+        <figure id="game-figure" class="figure with-buttons right" title="Games">
           <img id="game-image" src="">
           <div class="figure-text">
             <h1>Top 3 Games</h1>
@@ -76,11 +76,11 @@
             <div id="game-details"></div>
           </div>
         </figure>
-        <button class="next-right" onclick="changeFave(1,'game')">&gt</button>
+        <button class="next-right" onclick="arrowPress(1,'game')">&gt</button>
       </figure>
       <figure class="buttons">
-        <button class="next-left" onclick="changeFave(-1,'album')">&lt</button>
-        <figure class="figure with-buttons" title="Albums">
+        <button class="next-left" onclick="arrowPress(-1,'album')">&lt</button>
+        <figure id="album-figure" class="figure with-buttons" title="Albums">
           <img id="album-image" src="">
           <div class="figure-text">
             <h1>Top 3 albums</h1>
@@ -88,7 +88,7 @@
             <div id="album-details"></div>
           </div>
         </figure>
-        <button class="next-right" onclick="changeFave(1,'album')">&gt</button>
+        <button class="next-right" onclick="arrowPress(1,'album')">&gt</button>
       </figure>
     </div>
 

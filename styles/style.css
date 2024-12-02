@@ -225,7 +225,7 @@ main {
   }
 }
 
-.figure#right {
+figure.right {
   flex-direction: row-reverse;
   
   .figure-text {
@@ -279,7 +279,7 @@ figure.buttons {
   }
 }
 
-figure.with-buttons, figure.with-buttons#right {
+figure.with-buttons, figure.with-buttons.right {
   border-radius: 0;
   margin: 0;
   padding: 0;
@@ -314,7 +314,7 @@ footer {
 
 /* Smaller Desktop Breakpoint */
 @media all and (max-width: 1000px) {
-  .figure, .figure#right {
+  .figure, .figure.right {
     flex-direction: column;
     
     img, video, .figure-text {
@@ -395,7 +395,7 @@ footer {
     flex-direction: column;
   }
 
-  .figure, .figure#right {
+  .figure {
     flex-direction: column;
     margin: 10px;
     padding: 0;
@@ -454,5 +454,27 @@ footer {
         background-color: #DB162F;
       }
     }
+  }
+
+  figure.right {
+    flex-direction: row;
+
+    .figure-text {
+      text-align: left;
+      
+      p, ul {
+        padding-left: 10px;
+        border-left: 5px solid #7a1515;
+        border-right: none;
+        list-style: inside disc;
+      }
+    }
+  }
+
+  figure.buttons {
+    margin: 10px;
+    padding: 0;
+    border-radius: 25px;
+    background-color: #d15f5f;
   }
 }

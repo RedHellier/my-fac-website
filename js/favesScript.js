@@ -66,18 +66,36 @@ const faves = {
         ]
     }
 }
-console.log("hello");
+
 for (let f in faves) {
     changeFave(0,f);
 }
 
 function changeFave(direction,faveType) {
     faves[faveType].index += direction;
-    faves[faveType].index = faves[faveType].index > 2 ? 2 : faves[faveType].index < 0 ? 0 : faves[faveType].index;
+    // faves[faveType].index = faves[faveType].index > 2 ? 2 : faves[faveType].index < 0 ? 0 : faves[faveType].index;
     document.getElementById(faveType + "-image").setAttribute("src","images/" + faveType + "/" + faves[faveType].images[faves[faveType].index]);
     document.getElementById(faveType + "-title").innerHTML = faves[faveType].titles[faves[faveType].index];
     document.getElementById(faveType + "-details").innerHTML = "";
     for (let d of faves[faveType].details[faves[faveType].index]) {
         document.getElementById(faveType + "-details").innerHTML += "<p>" + d + "</p>";
+    }
+}
+
+function scrollToFigureTop(faveType) {
+    document.body.scrollBy({
+        top: (document.getElementById(faveType + "-figure").getBoundingClientRect().y-92.1),
+        left: 0,
+        behavior:"smooth"});
+    document.documentElement.scrollBy({
+        top: (document.getElementById(faveType + "-figure").getBoundingClientRect().y-92.1),
+        left: 0,
+        behavior:"smooth"});
+}
+
+function arrowPress(direction,faveType) {
+    if (faves[faveType].index + direction >= 0 && faves[faveType].index + direction <= 2) {
+        changeFave(direction,faveType);
+        scrollToFigureTop(faveType);
     }
 }
