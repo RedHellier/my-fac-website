@@ -24,27 +24,44 @@ document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).
 //     };
 // }
 
-function setActiveTab(element) {
-    if (element.getAttribute("active-tab")!=="true") {
+// function setActiveTab(element) {
+//     if (element.getAttribute("active-tab")!=="true") {
 
-        for (let t of tabs) {
-            if (element.id===t.id) {
-                t.setAttribute("active-tab","true");
-            } else {
-                t.setAttribute("active-tab","false");
-            }
-        }
+//         for (let t of tabs) {
+//             if (element.id===t.id) {
+//                 t.setAttribute("active-tab","true");
+//             } else {
+//                 t.setAttribute("active-tab","false");
+//             }
+//         }
         
-        for (let c of contents) {
-            if (element.id===c.id) {
-                c.setAttribute("active-page","true");
-                figures = c.getElementsByClassName("figure");
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-                currentFigure = 0;
-                document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
-            } else {
-                c.setAttribute("active-page","false");
+//         for (let c of contents) {
+//             if (element.id===c.id) {
+//                 c.setAttribute("active-page","true");
+//                 figures = c.getElementsByClassName("figure");
+//                 document.body.scrollTop = 0;
+//                 document.documentElement.scrollTop = 0;
+//                 currentFigure = 0;
+//                 document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
+//             } else {
+//                 c.setAttribute("active-page","false");
+//             }
+//         }
+//     }
+// }
+
+function displayDropdown() {
+    document.getElementById("dropdown-window").classList.toggle("show-dropdown");
+}
+  
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-list");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show-dropdown')) {
+                openDropdown.classList.remove('show-dropdown');
             }
         }
     }
