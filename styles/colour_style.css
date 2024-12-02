@@ -1,0 +1,95 @@
+header {
+    color: var(--header-sidebar-txt-colour);
+
+    .sidebar {
+        background-color: var(--sidebar-bg-colour); 
+    }
+
+    nav {
+        background-color: var(--header-bg-colour); 
+
+        .tab {
+            color: inherit; 
+        }
+
+        [active-tab="true"], .tab-page:hover {
+            background-color: var(--sidebar-bg-colour); 
+        }
+    }
+}
+
+main {
+    background-color: var(--main-bg-colour); 
+    .sidebar {
+        background-color: var(--sidebar-bg-colour); 
+        color: var(--header-sidebar-txt-colour); 
+
+        #scroller {
+            background-color: var(--scroller-bg-and-figure-txt-colour); 
+        }
+    }
+}
+
+.figure, .figure.right {
+    background-color: var(--figure-bg-colour); 
+
+    img, video {
+        background-color: black; 
+        border-color: var(--scroller-bg-and-figure-txt-colour); 
+    }
+
+    .figure-text {
+        color: var(--scroller-bg-and-figure-txt-colour); 
+
+        p, ul {
+            border-color: var(--figure-misc-colour); 
+        }
+
+        #snacman-link {
+            color: var(--header-sidebar-txt-colour); 
+            background-color: var(--figure-misc-colour);  
+        }
+
+        #snacman-link:hover {
+            background-color: var(--header-bg-colour); 
+        }
+    }
+}
+
+figure.buttons {
+    background-color: var(--figure-bg-colour); 
+
+    button {
+        background-color: var(--figure-bg-colour); 
+        color: var(--scroller-bg-and-figure-txt-colour); 
+    }
+
+    button.next-left:hover {
+        background-image: linear-gradient(to left,var(--figure-bg-colour) ,var(--figure-misc-colour) ); 
+    }
+
+    button.next-right:hover {
+        background-image: linear-gradient(to right,var(--figure-bg-colour) ,var(--figure-misc-colour) );
+    }
+}
+
+footer {
+    background-color: var(--header-bg-colour); /* Colour 8: Footer Sidebar Colour */
+
+    .sidebar {
+        color: var(--header-sidebar-txt-colour); 
+        background-color: var(--sidebar-bg-colour); /* Colour 9: Footer Colour */
+
+    }
+}
+
+.dropdown-button {
+    color: var(--header-sidebar-txt-colour); 
+    background-color: var(--header-bg-colour); 
+}
+
+.dropdown-list a {
+    color: var(--header-sidebar-txt-colour); 
+    border-color: var(--main-bg-colour); 
+    background-color: var(--header-bg-colour); 
+}

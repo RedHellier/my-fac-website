@@ -22,6 +22,7 @@ body {
 
 header {
   box-shadow: 0px 2px 10px black;
+  /* color: #ffffff; */
   display:flex;
   position: fixed;
   top: 0;
@@ -34,27 +35,23 @@ header {
     display: inline-flex;
     flex-basis: 160px;
     flex-direction: column;
-    background-color: #7a1515;
+    /* background-color: #7a1515; */
   
     h1 {
-      background-color: #8f0c1e;
+      /* background-color: #8f0c1e; */
       margin: 0;
-      border: none;
       padding: 0.3em 0.5em;
-      text-decoration: none;
       text-align: center;
-      color: #ffffff;
       font-family: Tahoma, sans-serif;
-      font-weight: 800;
+      font-weight: 500;
       font-size: 40px;
-      -webkit-text-stroke: #000000 1.5px;
     }
     
   }
 
   nav {
     flex-grow: 1;
-    background-color: #DB162F;
+    /* background-color: #DB162F; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -62,9 +59,8 @@ header {
     .tab {
       font-family: Tahoma, sans-serif;
       font-weight: 300;
-      color: #ffffff;
+      /* color: inherit; */
       font-size: 25px;
-      background-color: #DB162F;
       text-align: center;
       align-content: center;
       text-decoration: none;
@@ -76,7 +72,7 @@ header {
     }
 
     [active-tab="true"] {
-      background-color: #8f0c1e;
+      /* background-color: #8f0c1e; */
     }
 
     .tab p {
@@ -87,12 +83,12 @@ header {
 }
 
 .tab-page:hover {
-  background-color: #8f0c1e;
+  /* background-color: #8f0c1e; */
   cursor: pointer;
 }
 
 main {
-  background-color: #470000;
+  /* background-color: #470000; */
   display:flex;
   margin-top: 72px;
   flex: 1;
@@ -101,15 +97,15 @@ main {
   .sidebar {
     display: inline-flex;
     flex-direction: column;
-    background-color: #8f0c1e;
+    /* background-color: #8f0c1e; */
+    /* color: #ffffff; */
 
     #scroller {
       width: inherit;
-      background-color: #521b1b;
+      /* background-color: #521b1b; */
       text-align: center;
       font-family: Tahoma, sans-serif;
       font-weight: 300;
-      color: #ffffff;
       font-size: 20px;
 
       p {
@@ -123,19 +119,6 @@ main {
 
 }
 
-.content {
-  flex-grow: 1;
-  background-color: rgb(51, 5, 5);
-}
-
-[active-page="true"] {
-  display: block;
-}
-
-[active-page="false"] {
-  display: none;
-}
-
 .figure {
   display: flex;
   align-items: center;
@@ -144,7 +127,7 @@ main {
   margin: 20px 30px 30px 30px;
   padding: 0 50px;
   border-radius: 25px;
-  background-color: #d15f5f;
+  /* background-color: #d15f5f; */
   
   img {
     box-sizing: border-box;
@@ -154,17 +137,23 @@ main {
     height: fit-content;
     max-height: 70vh;
     max-width: fit-content;
-    border: solid #2e2323 7px;
+    border: solid 7px;
     border-radius: 25px;
   }
 
-  video, iframe {
+  video {
     width: 50%;
     height: fit-content;
     margin: 30px;
-    border: solid #2e2323 7px;
+    border: solid 7px;
     border-radius: 25px;
-    background-color: #000000;
+    /* background-color: #000000; */
+  }
+
+  #snacman-video {
+    width: 450px;
+    height: 492px;
+    object-fit: cover;
   }
 
   .figure-text {
@@ -176,7 +165,7 @@ main {
     width: 55%;
     align-content: center;
     font-family: Tahoma, sans-serif;
-    color: rgb(51, 5, 5);
+    /* color: rgb(51, 5, 5); */
     margin: 0 30px;
     padding: 20px 0;
     font-size: 20px;
@@ -196,7 +185,7 @@ main {
       margin: 5px 0;
       padding-left: 10px;
       line-height: 30px;
-      border-left: 5px solid #7a1515;
+      border-left: 5px solid;
       border-radius: 3px;
       list-style: inside disc;
     }
@@ -207,25 +196,25 @@ main {
     }
 
     #snacman-link {
-      background-color:#7a1515;
+      /* background-color:#7a1515; */
       border-radius: 12px;
       padding: 12px;
       width: fit-content;
       text-decoration: none;
-      color: aliceblue;
+      /* color: aliceblue; */
       font-size: 22px;
       margin-top: 12px;
 
     }
 
     #snacman-link:hover {
-      background-color: #DB162F;
+      /* background-color: #DB162F; */
     }
 
   }
 }
 
-figure.right {
+.figure.right {
   flex-direction: row-reverse;
   
   .figure-text {
@@ -233,7 +222,7 @@ figure.right {
     
     p, ul {
       padding-right: 10px;
-      border-right: 5px solid #7a1515;
+      border-right: 5px solid;
       border-left: none;
       list-style: inside disc;
     }
@@ -251,14 +240,15 @@ figure.buttons {
   justify-content: center;
   margin: 20px 30px 30px 30px;
   height: fit-content;
+  border-radius: 25px;
 
   button {
     width: 50px;
     margin: 0;
     padding: 0 10px;
-    background: #d15f5f;
+    /* background-color: #d15f5f; */
     border: none;
-    color: rgb(51, 5, 5);
+    /* color: rgb(51, 5, 5); */
     font-size: 40px;
   }
 
@@ -266,16 +256,8 @@ figure.buttons {
     border-radius: 25px 0 0 25px;
   }
 
-  button.next-left:hover {
-    background-image: linear-gradient(to left,#d15f5f,#7a1515);
-  }
-
   button.next-right {
     border-radius: 0 25px 25px 0;
-  }
-
-  button.next-right:hover {
-    background-image: linear-gradient(to right,#d15f5f,#7a1515);
   }
 }
 
@@ -286,7 +268,7 @@ figure.with-buttons, figure.with-buttons.right {
 }
 
 footer {
-  background-color: #303030;
+  /* background-color: #303030; */
   display:flex;
   box-shadow: 0px -2px 10px black;
   min-height: 72px;
@@ -295,14 +277,14 @@ footer {
     display: inline-flex;
     flex-basis: 160px;
     flex-direction: column;
-    background-color: #686868;
+    /* background-color: #686868; */
   
     h1 {
       margin: 0;
       padding: 0;
       height: 10px;
       text-align: center;
-      color: #ffffff;
+      /* color: #ffffff; */
       font-family: Tahoma, sans-serif;
       font-weight: 800;
       font-size: 40px;
@@ -359,9 +341,7 @@ footer {
     border: none;
     font-family: Tahoma, sans-serif;
     font-weight: 300;
-    color: #ffffff;
     font-size: 25px;
-    background-color: #DB162F;
     text-align: center;
     align-content: center;
     text-decoration: none;
@@ -375,15 +355,12 @@ footer {
     margin-top: 72.1px;
 
     a {
-      background-color: #DB162F;
-      border-top: black 2px solid;
+      border-top: 2px solid;
       text-align: center;
       height: 72px;
       font-family: Tahoma, sans-serif;
       font-weight: 300;
-      color: #ffffff;
       font-size: 25px;
-      background-color: #DB162F;
       text-align: center;
       align-content: center;
       text-decoration: none;
@@ -400,7 +377,6 @@ footer {
     margin: 10px;
     padding: 0;
     border-radius: 25px;
-    background-color: #d15f5f;
     
     img {
       box-sizing: border-box;
@@ -408,17 +384,23 @@ footer {
       margin: 3%;
       width: 90%;
       height: fit-content;
-      border: solid #2e2323 7px;
-      border-radius: 25px;
+      /* border: solid #2e2323 7px; */
+      /* border-radius: 25px; */
     }
 
-    video, iframe {
+    video {
       width: 50%;
       height: fit-content;
       margin: 30px;
-      border: solid #2e2323 7px;
+      /* border: solid #2e2323 7px;
       border-radius: 25px;
-      background-color: #000000;
+      background-color: #000000; */
+    }
+
+    #snacman-video {
+      width: 222px;
+      height: 246px;
+      object-fit: cover;
     }
 
     .figure-text {
@@ -426,10 +408,10 @@ footer {
       flex-direction: column;
       justify-content: center;
       width: 90%;
-      align-content: center;
+      /* align-content: center;
       font-family: Tahoma, sans-serif;
       color: rgb(51, 5, 5);
-      margin: 0 30px;
+      margin: 0 30px; */
       font-size: 20px;
 
       img {
@@ -437,36 +419,17 @@ footer {
         border-radius: 0;
         margin: 10px 0;
       }
-
-      #snacman-link {
-        background-color:#7a1515;
-        border-radius: 12px;
-        padding: 12px;
-        width: fit-content;
-        text-decoration: none;
-        color: aliceblue;
-        font-size: 22px;
-        margin-top: 12px;
-
-      }
-
-      #snacman-link:hover {
-        background-color: #DB162F;
-      }
     }
   }
 
-  figure.right {
-    flex-direction: row;
-
+  .figure.right {
     .figure-text {
       text-align: left;
       
       p, ul {
         padding-left: 10px;
-        border-left: 5px solid #7a1515;
+        border-left: 5px solid;
         border-right: none;
-        list-style: inside disc;
       }
     }
   }
@@ -475,6 +438,5 @@ footer {
     margin: 10px;
     padding: 0;
     border-radius: 25px;
-    background-color: #d15f5f;
   }
 }

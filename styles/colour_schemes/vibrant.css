@@ -1,0 +1,41 @@
+@property --header-sidebar-txt-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ffffff;
+}
+
+@property --sidebar-bg-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #054fb9;
+}
+
+@property --header-bg-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #0073e6;
+}
+
+@property --main-bg-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #8babf1;
+}
+
+@property --scroller-bg-and-figure-txt-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #000000;
+}
+
+@property --figure-bg-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #f57600;
+}
+
+@property --figure-misc-colour {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #c44601;
+}
