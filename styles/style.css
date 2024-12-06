@@ -71,10 +71,6 @@ header {
       margin: 10px 0;
     }
 
-    [active-tab="true"] {
-      /* background-color: #8f0c1e; */
-    }
-
     .tab p {
       margin: 10px 0;
     }
@@ -207,10 +203,6 @@ main {
 
     }
 
-    #snacman-link:hover {
-      /* background-color: #DB162F; */
-    }
-
   }
 }
 
@@ -246,9 +238,7 @@ figure.buttons {
     width: 50px;
     margin: 0;
     padding: 0 10px;
-    /* background-color: #d15f5f; */
     border: none;
-    /* color: rgb(51, 5, 5); */
     font-size: 40px;
   }
 
@@ -291,7 +281,48 @@ footer {
       -webkit-text-stroke: #000000 1.5px;
     }
   }
+}
 
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.dropdown-button {
+  width: 100%;
+  border: none;
+  font-family: Tahoma, sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+.dropdown-list {
+  width: inherit;
+  display: none;
+  position: absolute;
+  left: 0;
+  margin-top: 72.1px;
+
+  a {
+    border-top: 2px solid;
+    text-align: center;
+    height: 72px;
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+  }
+}
+
+.show-dropdown {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Smaller Desktop Breakpoint */
@@ -328,48 +359,6 @@ footer {
 
   header .sidebar {
     flex-basis: 100px;
-  }
-
-  .dropdown {
-    width: 100%;
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .dropdown-button {
-    width: 100%;
-    border: none;
-    font-family: Tahoma, sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    text-align: center;
-    align-content: center;
-    text-decoration: none;
-  }
-
-  .dropdown-list {
-    width: inherit;
-    display: none;
-    position: absolute;
-    left: 0;
-    margin-top: 72.1px;
-
-    a {
-      border-top: 2px solid;
-      text-align: center;
-      height: 72px;
-      font-family: Tahoma, sans-serif;
-      font-weight: 300;
-      font-size: 25px;
-      text-align: center;
-      align-content: center;
-      text-decoration: none;
-    }
-  }
-
-  .show-dropdown {
-    display: flex;
-    flex-direction: column;
   }
 
   .figure {

@@ -3,8 +3,6 @@ const dropdownTabs = document.getElementsByClassName("tab-dropdown");
 const contents = document.getElementsByClassName("content");
 const figures = document.getElementsByClassName("figure");
 
-
-
 let activeContent;
 let currentFigure;
 
@@ -13,45 +11,12 @@ document.documentElement.scrollTop = 0;
 currentFigure = 0;
 document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
 
-//setActiveTab(tabs.item(0));
-
-// for (let t of tabs) {
-//     t.onclick = function() {
-//         setActiveTab(t)
-//         document.body.scrollTop = 0;
-//         document.documentElement.scrollTop = 0;
-//         currentFigure = 0;
-//     };
-// }
-
-// function setActiveTab(element) {
-//     if (element.getAttribute("active-tab")!=="true") {
-
-//         for (let t of tabs) {
-//             if (element.id===t.id) {
-//                 t.setAttribute("active-tab","true");
-//             } else {
-//                 t.setAttribute("active-tab","false");
-//             }
-//         }
-        
-//         for (let c of contents) {
-//             if (element.id===c.id) {
-//                 c.setAttribute("active-page","true");
-//                 figures = c.getElementsByClassName("figure");
-//                 document.body.scrollTop = 0;
-//                 document.documentElement.scrollTop = 0;
-//                 currentFigure = 0;
-//                 document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
-//             } else {
-//                 c.setAttribute("active-page","false");
-//             }
-//         }
-//     }
-// }
-
 function displayDropdown() {
     document.getElementById("dropdown-window").classList.toggle("show-dropdown");
+}
+
+function displayColourDropdown() {
+    document.getElementById("dropdown-colour-window").classList.toggle("show-dropdown");
 }
   
 window.onclick = function(event) {

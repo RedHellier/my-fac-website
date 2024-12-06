@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/colour_style.css" />
-    <link rel="stylesheet" href="styles/colour_schemes/vibrant.css" />
+    <link rel="stylesheet" href="styles/colour_schemes/default_red.css" />
   </head>
   <body>
     <!-- HEADER SECTION, NAVIGATION BAR-->
@@ -163,71 +163,15 @@
     <!-- FOOTER SECTION, Accessabilty Options-->
     <footer id="footer">
       <div class="sidebar">
-        <h1>-</h1>
-        <h1>-</h1>
-        <h1>-</h1>
+        <div id="dropdown-colour-window" class="dropdown-list">
+          <a href="./work.html">MY WORK</a>
+          <a href="./faves.html">MY FAVES</a>
+        </div>
+        <button id="change-colour" class="dropdown-button" onclick="displayColourDropdown()">Change Colour Scheme</button>
       </div>
+
       <div class="footer-content"></div>
     </footer>
-
-    <!-- MOBILE LAYOUT>
-    <div class="mobile">
-
-      <header>
-        <button class="tab-dropdown" onclick="open">
-      </header>
-
-
-      <main>
-
-        <div class="content" id="about" active-page="true">
-          <figure class="figure" title="About Me">
-            <img src="images/Childhood.jpg">
-            <div class="figure-text">
-              <h1 class="title-text">About Me</h1>
-              <p>I am an aspiring software developer with a passion for learning more. You could say I love software and self development.</p>
-              <p>What I'm looking forward to most about this path I'm on is making exiting and innovative projects with other people. I have always loved sharing ideas with friends and colleagues and coming together to find solutions to problems.</p>
-              <p>Starting in September 2024 I attended the Founders and Coders coding meetups. This experience has helped me gain a lot of confidence in my coding skills as well as excitement to use them. I have met all sorts of people with very different backgrounds and it's been fantastic getting to chat and compare work with them.</p>
-              <p>With the ever changing nature of this industry it can be easy to worry about pursuing this path now, but I find that it only gives me more drive to push on.</p>
-            </div>
-          </figure>
-          <figure id="right" class="figure" title="Developer">
-            <img src="images/landscape-placeholder.svg">
-            <div class="figure-text">
-              <h1 class="title-text">The Developer in Me</h1>
-              <p>I studied Computer Science at The Univeristy of Sheffield from 2017 - 2020</p>
-              <ul>Some key modules of my degree include:
-                <li>Data Driven Computing > We learnt how to build a machine learning algorithm and used large data sets to improve our algorithm</li>
-                <li>The Software Hut > In a team of 5, we used Ruby on Rails to build and deply a web app</li>
-                <li>Human-Machine Interaction and Robotics > We programmed the ev3 Lego Mindstorm Robots to search an area to find a light source, using seach patterns, object avoidance, and beaconing behaviours</li>
-              </ul>
-              <p>I have recently developed an in-browser game called SNAC-MAN using HTML,CSS and Javascript. I used canvas graphics to draw the game and a grid based collision system. The ghosts all move based on a basic algorithm that looks ahead to see which direction (up, down, left, right) is closst to their target square.</p>
-            </div>
-          </figure>
-          <figure class="figure" title="Creative">
-            <img src="images/Childhood.jpg">
-            <div class="figure-text">
-              <h1 class="title-text">The Creative in Me</h1>
-              <p>My desire to become a software developer began as a desire to become a game developer. Coming up with new ideas and then trying to build them and test them is an addictive process for me.</p>
-              <p>SNAC-MAN was a very fun challenge as I had to pick which aspects of each game (PAC-MAN and Snake) to use. For example, should the snake be able to go back on itself? You can in PAC-MAN, but you fundamentally can't in snake.Which mechanic would make it more fun is the question. I decided to go with the snake approach as this adds a layer of tactical give and take. The longer you are, the harder it is to move around the maze freely, so you could sacrifice some of your length to regain some breathing room.</p>
-              <p>Decisions like this are what make game development so interesting and this extends to all software development. The constant process of choosing what features to develop and how to tweak them on a micro level to fit their purpose best.</p>
-              <p>Another passion of mine is film making. I have made two short films, one solo endeavour and the other a two person project. I am also currently working on shooting a music video with a friend of mine. Crafting narratives is such a joy and being able to work with friends to make them come to lifeis an amazing privilage. I plan to make many more in future.</p>
-            </div>
-          </figure>
-        </div>
-        
-      </main>
-
-      <footer id="footer">
-        <div class="sidebar">
-          <h1>-</h1>
-          <h1>-</h1>
-          <h1>-</h1>
-        </div>
-        <div class="footer-content">
-        </div>
-      </footer>
-    </div> -->
 
     <script src="js/script.js"></script>
   </body>
