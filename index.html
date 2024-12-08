@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head id="head">
     <title>Red Hellier - An Introduction</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/colour_style.css" />
-    <link rel="stylesheet" href="styles/colour_schemes/default_red.css" />
+    <script src="js/colourScheme.js"></script>
+    <link id="colour-scheme" rel="stylesheet" href="styles/colour_schemes/default_red.css" />
   </head>
   <body>
+
     <!-- HEADER SECTION, NAVIGATION BAR-->
     <header id="header">
+
       <div class="sidebar">
         <h1>RED</h1>
       </div>
 
       <nav class="desktop">
-        <a
-          class="tab tab-page"
-          id="about"
-          active-tab="true"
-          href="./index.html"
-        >
+        <a class="tab tab-page" id="about" active-tab="true" href="./index.html">
           <p>ABOUT ME</p>
         </a>
         <a class="tab tab-page" id="work" active-tab="false" href="./work.html">
           <p>MY WORK</p>
         </a>
-        <a
-          class="tab tab-page"
-          id="faves"
-          active-tab="false"
-          href="./faves.html"
-        >
+        <a class="tab tab-page" id="faves" active-tab="false" href="./faves.html">
           <p>MY FAVES</p>
         </a>
       </nav>
 
       <div class="mobile dropdown">
-        <button class="dropdown-button" onclick="displayDropdown()">
+        <button class="dropdown-button" onclick="displayDropdown('nav')">
           ABOUT ME &nbsp &nbsp v
         </button>
-        <div id="dropdown-window" class="dropdown-list">
+        <div id="dropdown-nav-window" class="dropdown-list">
           <a href="./work.html">MY WORK</a>
           <a href="./faves.html">MY FAVES</a>
         </div>
@@ -162,12 +155,12 @@
 
     <!-- FOOTER SECTION, Accessabilty Options-->
     <footer id="footer">
-      <div class="sidebar">
+      <div class="sidebar dropdown">
         <div id="dropdown-colour-window" class="dropdown-list">
-          <a href="./work.html">MY WORK</a>
-          <a href="./faves.html">MY FAVES</a>
+          <button id="default_red" class="colour-change-button">Default</button>
+          <button id="vibrant" class="colour-change-button">High Contrast</button>
         </div>
-        <button id="change-colour" class="dropdown-button" onclick="displayColourDropdown()">Change Colour Scheme</button>
+        <button id="change-colour" class="dropdown-button" onclick="displayDropdown('colour')">Change Colour Scheme</button>
       </div>
 
       <div class="footer-content"></div>

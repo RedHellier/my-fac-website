@@ -2,38 +2,40 @@ const tabs = document.getElementsByClassName("tab-page");
 const dropdownTabs = document.getElementsByClassName("tab-dropdown");
 const contents = document.getElementsByClassName("content");
 const figures = document.getElementsByClassName("figure");
+const dropdowns = document.getElementsByClassName("dropdown-list");
+// const colourScheme = document.getElementById("colour-scheme");
+// const colourSchemeChangeButtons = document.getElementsByClassName("colour-change-button");
 
 let activeContent;
 let currentFigure;
+// let colourSchemeLink;
 
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 currentFigure = 0;
 document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
 
-function displayDropdown() {
-    document.getElementById("dropdown-window").classList.toggle("show-dropdown");
+function displayDropdown(dropdown) {
+    document.getElementById(`dropdown-${dropdown}-window`).classList.toggle("show-dropdown");
 }
 
-function displayColourDropdown() {
-    document.getElementById("dropdown-colour-window").classList.toggle("show-dropdown");
+function hideDropdowns() {
+    for (let d of dropdowns) {
+        if (d.classList.contains('show-dropdown')) {
+            d.classList.remove('show-dropdown');
+        }
+    }
 }
   
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-list");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show-dropdown')) {
-                openDropdown.classList.remove('show-dropdown');
-            }
-        }
+        hideDropdowns();
     }
 }
 
 window.onscroll = function() {
-    scrollFunction()
+    scrollFunction();
+    hideDropdowns();
 };
 
 function scrollFunction() {
@@ -51,3 +53,15 @@ function scrollFunction() {
 
     document.getElementById("scrollerText").innerHTML = figures.item(currentFigure).getAttribute("title");
 }
+
+// function changeColourScheme(scheme) {
+//     console.log("change");
+//     colourSchemeLink = `styles/colour_schemes/${scheme}.css`;
+//     colourScheme.setAttribute("href",colourSchemeLink);
+// }
+
+// for (let btn of colourSchemeChangeButtons) {
+//     btn.addEventListener("click",function() {
+//         changeColourScheme(btn.id);
+//     })
+// }
