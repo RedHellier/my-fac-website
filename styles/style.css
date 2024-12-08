@@ -22,7 +22,6 @@ body {
 
 header {
   box-shadow: 0px 2px 10px black;
-  /* color: #ffffff; */
   display:flex;
   position: fixed;
   top: 0;
@@ -35,10 +34,8 @@ header {
     display: inline-flex;
     flex-basis: 160px;
     flex-direction: column;
-    /* background-color: #7a1515; */
   
     h1 {
-      /* background-color: #8f0c1e; */
       margin: 0;
       padding: 0.3em 0.5em;
       text-align: center;
@@ -51,7 +48,6 @@ header {
 
   nav {
     flex-grow: 1;
-    /* background-color: #DB162F; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -59,7 +55,6 @@ header {
     .tab {
       font-family: Tahoma, sans-serif;
       font-weight: 300;
-      /* color: inherit; */
       font-size: 25px;
       text-align: center;
       align-content: center;
@@ -79,12 +74,10 @@ header {
 }
 
 .tab-page:hover {
-  /* background-color: #8f0c1e; */
   cursor: pointer;
 }
 
 main {
-  /* background-color: #470000; */
   display:flex;
   margin-top: 72px;
   flex: 1;
@@ -93,12 +86,9 @@ main {
   .sidebar {
     display: inline-flex;
     flex-direction: column;
-    /* background-color: #8f0c1e; */
-    /* color: #ffffff; */
 
     #scroller {
       width: inherit;
-      /* background-color: #521b1b; */
       text-align: center;
       font-family: Tahoma, sans-serif;
       font-weight: 300;
@@ -123,7 +113,6 @@ main {
   margin: 20px 30px 30px 30px;
   padding: 0 50px;
   border-radius: 25px;
-  /* background-color: #d15f5f; */
   
   img {
     box-sizing: border-box;
@@ -143,7 +132,6 @@ main {
     margin: 30px;
     border: solid 7px;
     border-radius: 25px;
-    /* background-color: #000000; */
   }
 
   #snacman-video {
@@ -158,15 +146,15 @@ main {
     justify-content: center;
     text-align: left;
     min-height: 80%;
-    width: 55%;
+    width: 50%;
     align-content: center;
     font-family: Tahoma, sans-serif;
-    /* color: rgb(51, 5, 5); */
     margin: 0 30px;
     padding: 20px 0;
     font-size: 20px;
 
     img {
+      width: 200px;
       border: none;
       border-radius: 0;
       margin: 10px 0;
@@ -192,12 +180,10 @@ main {
     }
 
     #snacman-link {
-      /* background-color:#7a1515; */
       border-radius: 12px;
       padding: 12px;
       width: fit-content;
       text-decoration: none;
-      /* color: aliceblue; */
       font-size: 22px;
       margin-top: 12px;
 
@@ -258,7 +244,6 @@ figure.with-buttons, figure.with-buttons.right {
 }
 
 footer {
-  /* background-color: #303030; */
   display:flex;
   box-shadow: 0px -2px 10px black;
   min-height: 72px;
@@ -267,14 +252,12 @@ footer {
     display: inline-flex;
     flex-basis: 160px;
     flex-direction: column;
-    /* background-color: #686868; */
   
     h1 {
       margin: 0;
       padding: 0;
       height: 10px;
       text-align: center;
-      /* color: #ffffff; */
       font-family: Tahoma, sans-serif;
       font-weight: 800;
       font-size: 40px;
@@ -283,50 +266,8 @@ footer {
   }
 }
 
-.dropdown {
-  width: 100%;
-  display: flex;
-  flex-grow: 1;
-}
-
-.dropdown-button {
-  width: 100%;
-  border: none;
-  font-family: Tahoma, sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-  text-align: center;
-  align-content: center;
-  text-decoration: none;
-}
-
-.dropdown-list {
-  width: inherit;
-  display: none;
-  position: absolute;
-  left: 0;
-  margin-top: 72.1px;
-
-  a {
-    border-top: 2px solid;
-    text-align: center;
-    height: 72px;
-    font-family: Tahoma, sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    text-align: center;
-    align-content: center;
-    text-decoration: none;
-  }
-}
-
-.show-dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
 /* Smaller Desktop Breakpoint */
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1025px) {
   .figure, .figure.right {
     flex-direction: column;
     
@@ -340,10 +281,33 @@ footer {
     font-size: 22px;
   }
 
+  .figure #snacman-video {
+    width: 333px;
+    height: 370px;
+    object-fit: cover;
+  }
+
+  .figure .figure-text a img {
+    width: 200px;
+  }
+
+}
+
+@media all and (max-width: 690px) {
+
+  .figure, .figure.right{
+    padding: 0 20px;
+  }
+  .figure #snacman-video {
+    width: 222px;
+    height: 246px;
+    object-fit: cover;
+  }
+
 }
 
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 540px) {
 
   .mobile {
     display: flex;
@@ -373,23 +337,12 @@ footer {
       margin: 3%;
       width: 90%;
       height: fit-content;
-      /* border: solid #2e2323 7px; */
-      /* border-radius: 25px; */
     }
 
     video {
       width: 50%;
       height: fit-content;
       margin: 30px;
-      /* border: solid #2e2323 7px;
-      border-radius: 25px;
-      background-color: #000000; */
-    }
-
-    #snacman-video {
-      width: 222px;
-      height: 246px;
-      object-fit: cover;
     }
 
     .figure-text {
@@ -397,11 +350,11 @@ footer {
       flex-direction: column;
       justify-content: center;
       width: 90%;
-      /* align-content: center;
-      font-family: Tahoma, sans-serif;
-      color: rgb(51, 5, 5);
-      margin: 0 30px; */
       font-size: 20px;
+
+      h1 {
+        font-size: 40px;
+      }
 
       img {
         border: none;
@@ -427,5 +380,47 @@ footer {
     margin: 10px;
     padding: 0;
     border-radius: 25px;
+  }
+
+  .dropdown {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .dropdown-button {
+    width: 100%;
+    border: none;
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+  }
+  
+  .dropdown-list {
+    width: inherit;
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: 72.1px;
+  
+    a {
+      border-top: 2px solid;
+      text-align: center;
+      height: 72px;
+      font-family: Tahoma, sans-serif;
+      font-weight: 300;
+      font-size: 25px;
+      text-align: center;
+      align-content: center;
+      text-decoration: none;
+    }
+  }
+  
+  .show-dropdown {
+    display: flex;
+    flex-direction: column;
   }
 }

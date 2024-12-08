@@ -45,6 +45,10 @@ main {
             border-color: var(--figure-misc-colour); 
         }
 
+        img {
+            background-color: var(--figure-bg-colour);
+        }
+
         #snacman-link {
             color: var(--header-sidebar-txt-colour); 
             background-color: var(--figure-misc-colour);  
