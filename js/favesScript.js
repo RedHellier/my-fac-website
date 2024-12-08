@@ -73,8 +73,8 @@ for (let f in faves) {
 
 function changeFave(direction,faveType) {
     faves[faveType].index += direction;
-    // faves[faveType].index = faves[faveType].index > 2 ? 2 : faves[faveType].index < 0 ? 0 : faves[faveType].index;
     document.getElementById(faveType + "-image").setAttribute("src","images/" + faveType + "/" + faves[faveType].images[faves[faveType].index]);
+    document.getElementById(faveType + "-image").setAttribute("alt",faves[faveType].titles[faves[faveType].index]);
     document.getElementById(faveType + "-title").innerHTML = faves[faveType].titles[faves[faveType].index];
     document.getElementById(faveType + "-details").innerHTML = "";
     for (let d of faves[faveType].details[faves[faveType].index]) {
